@@ -1,0 +1,220 @@
+Renderer
+{
+	resolution 1280 720
+	maxDepth 10
+	numTilesX 5
+	numTilesY 5
+	envMap HDR/sunset.hdr
+	hdrMultiplier 5.0
+}
+
+Camera
+{
+	position 0.69 0.33 0.0
+	lookAt 0.0 0.07 0.0
+	fov 22
+}
+
+material blue_tiles
+{
+	albedoTexture renderman/textures/tiles_base.png
+	metallicRoughnessTexture renderman/textures/tiles_mat_rgh.png
+	normalTexture renderman/textures/tiles_normal.png
+}
+
+material white
+{
+	color 1.0 1.0 1.0
+	metallic 0.1
+	roughness 0.01
+}
+
+material chrome
+{
+	metallic 1.0
+	roughness 0.02
+	albedoTexture renderman/textures/striped_base.png
+	metallicRoughnessTexture renderman/textures/striped_mat_rgh.png
+	normalTexture renderman/textures/striped_normal.png
+}
+
+material gold
+{
+	color 0.9 0.618 0.1
+	albedoTexture renderman/textures/gold_base.png
+	metallicRoughnessTexture renderman/textures/gold_mat_rgh.png
+	normalTexture renderman/textures/gold_normal.png
+}
+
+
+material purple_cloth
+{
+	color 0.073 0.010 0.25
+	roughness 1.0
+	metallic 0.0
+}
+
+material blue_scratched
+{
+	albedoTexture renderman/textures/scratches_base.png
+	metallicroughnesstexture renderman/textures/scratches_mat_rgh.png
+	normaltexture renderman/textures/scratches_normal.png
+}
+
+material marble
+{
+	albedoTexture renderman/textures/marble_base.png
+	metallicRoughnessTexture renderman/textures/marble_mat_rgh.png
+}
+
+material base
+{
+	color 0.01 0.01 0.01
+	roughness 0.5
+	metallic 1.0
+}
+
+material checker
+{
+	color 1.0 1.0 1.0
+	roughness 0.5
+	metallic 0.0
+	albedoTexture renderman/textures/checker.png
+}
+
+mesh
+{
+	file renderman/background.obj
+	material checker
+}
+
+mesh
+{
+	file renderman/teapot.obj
+	material chrome
+	position 0 0 0.1
+	scale 0.6 0.6 0.6
+}
+
+mesh
+{
+	file renderman/teapot_base.obj
+	material base
+	position 0 0 0.1
+	scale 0.6 0.6 0.6
+}
+
+mesh
+{
+	file renderman/teapot.obj
+	material teal_glass
+	position 0 0.001 0
+	scale 0.6 0.6 0.6
+}
+
+mesh
+{
+	file renderman/teapot_base.obj
+	material base
+	position 0 0 0
+	scale 0.6 0.6 0.6
+}
+
+mesh
+{
+	file renderman/teapot.obj
+	material gold
+	position 0 0 -0.1
+	scale 0.6 0.6 0.6
+}
+
+mesh
+{
+	file renderman/teapot_base.obj
+	material base
+	position 0 0 -0.1
+	scale 0.6 0.6 0.6
+}
+
+mesh
+{
+	file renderman/teapot.obj
+	material blue_scratched
+	position -0.2 0 -0.1
+	scale 0.6 0.6 0.6
+}
+
+mesh
+{
+	file renderman/teapot_base.obj
+	material base
+	position -0.2 0 -0.1
+	scale 0.6 0.6 0.6
+}
+
+mesh
+{
+	file renderman/teapot.obj
+	material marble
+	position -0.2 0 0
+	scale 0.6 0.6 0.6
+}
+
+mesh
+{
+	file renderman/teapot_base.obj
+	material base
+	position -0.2 0 0
+	scale 0.6 0.6 0.6
+}
+
+mesh
+{
+	file renderman/teapot.obj
+	material blue_tiles
+	position -0.2 0 0.1
+	scale 0.6 0.6 0.6
+}
+
+mesh
+{
+	file renderman/teapot_base.obj
+	material base
+	position -0.2 0 0.1
+	scale 0.6 0.6 0.6
+}
+
+mesh
+{
+	file renderman/cloth.obj
+	material purple_cloth
+	position -0.2 0 0.0
+	scale 0.6 0.6 0.6
+}
+
+light
+{
+	type Quad
+	position -0.103555 0.284840 0.606827
+	v1 -0.103555 0.465656 0.521355
+	v2 0.096445 0.284840 0.606827
+	emission 40 41 41
+}
+
+light
+{
+	type Quad
+	position 0.303145 0.461806 -0.450967
+	v2 0.447143 0.461806 -0.306465
+	v1 0.362568 0.280251 -0.510182
+	emission 40 41 41
+}
+
+light
+{
+	type Quad
+	position -0.27 0.085 -0.05
+	v2 -0.27 0.085 0.05
+	v1 -0.27 0.125 -0.05
+	emission 4 4 
+}
